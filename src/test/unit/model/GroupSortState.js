@@ -1,7 +1,7 @@
 /*global QUnit*/
 
 sap.ui.define([
-    "typescript/example/ui5app/model/GroupSortState",
+    "hotel/ui5/model/GroupSortState",
     "sap/ui/model/json/JSONModel"
 ], function (GroupSortState, JSONModel) {
     "use strict";

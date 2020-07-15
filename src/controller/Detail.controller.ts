@@ -1,8 +1,8 @@
-import BaseController from "typescript/example/ui5app/controller/BaseController";
+import BaseController from "hotel/ui5/controller/BaseController";
 import JSONModel      from "sap/ui/model/json/JSONModel";
-import formatter      from "typescript/example/ui5app/model/formatter";
+import formatter      from "hotel/ui5/model/formatter";
 
-@UI5("typescript.example.ui5app.controller.Detail")
+@UI5("hotel.ui5.controller.Detail")
 export default class Detail extends BaseController
 {
     public formatter = formatter;

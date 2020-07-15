@@ -7,24 +7,24 @@ QUnit.config.autostart = false;
 
 sap.ui.require([
     "sap/ui/test/Opa5",
-    "typescript/example/ui5app/test/integration/pages/Common",
+    "hotel/ui5/test/integration/pages/Common",
     "sap/ui/test/opaQunit",
-    "typescript/example/ui5app/test/integration/pages/App",
-    "typescript/example/ui5app/test/integration/pages/Browser",
-    "typescript/example/ui5app/test/integration/pages/Master",
-    "typescript/example/ui5app/test/integration/pages/Detail",
-    "typescript/example/ui5app/test/integration/pages/NotFound"
+    "hotel/ui5/test/integration/pages/App",
+    "hotel/ui5/test/integration/pages/Browser",
+    "hotel/ui5/test/integration/pages/Master",
+    "hotel/ui5/test/integration/pages/Detail",
+    "hotel/ui5/test/integration/pages/NotFound"
 ], function (Opa5, Common) {
     "use strict";
     Opa5.extendConfig({
         arrangements: new Common(),
-        viewNamespace: "typescript.example.ui5app.view."
+        viewNamespace: "hotel.ui5.view."
     });
 
     sap.ui.require([
-        "typescript/example/ui5app/test/integration/NavigationJourneyPhone",
-        "typescript/example/ui5app/test/integration/NotFoundJourneyPhone",
-        "typescript/example/ui5app/test/integration/BusyJourneyPhone"
+        "hotel/ui5/test/integration/NavigationJourneyPhone",
+        "hotel/ui5/test/integration/NotFoundJourneyPhone",
+        "hotel/ui5/test/integration/BusyJourneyPhone"
     ], function () {
         QUnit.start();
     });

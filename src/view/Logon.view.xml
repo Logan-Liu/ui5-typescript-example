@@ -1,0 +1,49 @@
+<mvc:View
+        controllerName="hotel.ui5.controller.Logon"
+        xmlns="sap.m"
+        xmlns:layout = "sap.ui.layout"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:form="sap.ui.layout.form"
+        >
+<!--<App  backgroundImage="./image/logon.jpg">-->
+
+    <form:SimpleForm
+            editable="true"
+            layout="ResponsiveGridLayout"
+            labelSpanXL="3"
+            labelSpanL="3"
+            labelSpanM="3"
+            labelSpanS="12"
+            adjustLabelSpan="false"
+            emptySpanXL="4"
+            emptySpanL="4"
+            emptySpanM="4"
+            emptySpanS="0"
+            columnsXL="1"
+            columnsL="1"
+            columnsM="1"
+            singleContainerFullSize="true">
+        <form:content>
+            <Label text="用户名"/>
+            <Input required="true" value="{LocalServiceOverview>ServiceProject}" type="Text"/>
+            <Label text="密码"/>
+            <Input value="{LocalServiceOverview>ServiceProjectDesc}" required="true" type="Password">
+
+            </Input>
+            <Button text="登录" type="Emphasized" >
+                <layoutData>
+                    <layout:GridData span="XL5 L5 M5 S5" indent="XL3 L3 M3 S3"/>
+                </layoutData>
+            </Button>
+            <Button text="注册"  >
+                <layoutData>
+                    <layout:GridData span="XL5 L5 M5 S5" indent="XL3 L3 M3 S3"/>
+                </layoutData>
+            </Button>
+
+        </form:content>
+    </form:SimpleForm>
+
+<!--</App>-->
+
+</mvc:View>

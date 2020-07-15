@@ -1,7 +1,7 @@
 /*global QUnit,sinon*/
 
 sap.ui.define([
-    "typescript/example/ui5app/controller/App.controller",
+    "hotel/ui5/controller/App.controller",
     "sap/m/SplitApp",
     "sap/ui/core/Control",
     "sap/ui/model/json/JSONModel",

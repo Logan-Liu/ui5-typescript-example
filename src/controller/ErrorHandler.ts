@@ -1,8 +1,8 @@
 import UI5Object        from "sap/ui/base/Object";
 import MessageBox       from "sap/m/MessageBox";
-import MyUIComponent    from "typescript/example/ui5app/Component";
+import MyUIComponent    from "hotel/ui5/Component";
 
-@UI5("typescript.example.ui5app.controller.ErrorHandler")
+@UI5("hotel.ui5.controller.ErrorHandler")
 export default class ErrorHandler extends UI5Object
 {
     private _oResourceModel: sap.ui.model.resource.ResourceModel;
@@ -17,7 +17,7 @@ export default class ErrorHandler extends UI5Object
      * @class
      * @param {sap.ui.core.UIComponent} oComponent reference to the app's component
      * @public
-     * @alias typescript.example.ui5app.controller.ErrorHandler
+     * @alias hotel.ui5.controller.ErrorHandler
      */
     public constructor(oComponent: MyUIComponent) {
         super();

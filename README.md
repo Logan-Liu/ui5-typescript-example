@@ -14,9 +14,9 @@ npm start
 
 ```typescript
 import UIComponent  from "sap/ui/core/UIComponent";
-import models       from "typescript/example/ui5app/model/models";
+import models       from "hotel/ui5/model/models";
 
-@UI5("typescript.example.ui5app.Component")
+@UI5("hotel.ui5.Component")
 export default class Component extends UIComponent
 {
     public static metadata: any = {
