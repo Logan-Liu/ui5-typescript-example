@@ -1,0 +1,19 @@
+{
+	"News": [
+		{
+			"header": "订单管理",
+			"content": "新增订单：124",
+			"subheader": "库存充足",
+			"date": "2016-12-07T09:42:32.910Z",
+			"image": "images/ice-cream.jpg"
+		},
+		{
+			"header": "订单管理",
+			"content": "正在实时跟新预定价格...",
+			"subheader": "今天共计140间客房价格变动",
+			"date": "2016-12-06T00:00:00.000Z",
+			"image": "images/penguins.jpg",
+			"state": "Loading"
+		}
+	]
+}

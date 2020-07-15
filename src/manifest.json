@@ -2,7 +2,7 @@
     "_version": "1.4.0",
 
     "sap.app": {
-        "id": "typescript.example.ui5app",
+        "id": "hotel.ui5",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "title": "{{appTitle}}",
@@ -46,7 +46,7 @@
 
     "sap.ui5": {
         "rootView": {
-            "viewName": "typescript.example.ui5app.view.App",
+            "viewName": "hotel.ui5.view.App",
             "type": "XML",
             "id": "app"
         },
@@ -72,7 +72,7 @@
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                    "bundleName": "typescript.example.ui5app.i18n.i18n"
+                    "bundleName": "hotel.ui5.i18n.i18n"
                 }
             },
             "": {
@@ -85,12 +85,11 @@
             "config": {
                 "routerClass": "sap.m.routing.Router",
                 "viewType": "XML",
-                "viewPath": "typescript.example.ui5app.view",
+                "viewPath": "hotel.ui5.view",
                 "controlId": "idAppControl",
-                "controlAggregation": "detailPages",
+                "controlAggregation": "pages",
                 "bypassed": {
                     "target": [
-                        "master",
                         "notFound"
                     ]
                 },
@@ -100,6 +99,16 @@
             "routes": [
                 {
                     "pattern": "",
+                    "name": "home",
+                    "target": "startpage"
+                },
+                {
+                    "pattern": "logon",
+                    "name": "logon",
+                    "target": "logon"
+                },
+                {
+                    "pattern": "hotel",
                     "name": "master",
                     "target": [
                         "object",
@@ -117,6 +126,15 @@
             ],
 
             "targets": {
+                "startpage": {
+                    "viewName": "Startpage",
+                    "viewLevel": 1
+                },
+                "logon": {
+                    "viewName": "Logon",
+                    "viewLevel": 1
+                },
+
                 "master": {
                     "viewName": "Master",
                     "viewLevel": 1,

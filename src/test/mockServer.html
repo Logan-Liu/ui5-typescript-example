@@ -13,7 +13,7 @@
             data-sap-ui-theme="sap_belize"
             data-sap-ui-compatVersion="edge"
             data-sap-ui-preload="async"
-            data-sap-ui-resourceroots='{"typescript.example.ui5app": "../"}'
+            data-sap-ui-resourceroots='{"hotel.ui5": "../"}'
             data-sap-ui-frameOptions='allow'>     // NON-SECURE setting for testing environment
     </script>
 
@@ -23,7 +23,7 @@
     <script>
         sap.ui.getCore().attachInit(function () {
             sap.ui.require([
-                "typescript/example/ui5app/localService/mockserver",
+                "hotel/ui5/localService/mockserver",
                 "sap/m/Shell",
                 "sap/ui/core/ComponentContainer"
             ], function (server, Shell, ComponentContainer) {
@@ -33,7 +33,7 @@
                 new Shell({
                     app: new ComponentContainer({
                         height : "100%",
-                        name : "typescript.example.ui5app"
+                        name : "hotel.ui5"
                     })
                 }).placeAt("content");
             });

@@ -1,7 +1,7 @@
 /*global QUnit,sinon*/
 
 sap.ui.define([
-    "typescript/example/ui5app/controller/ListSelector",
+    "hotel/ui5/controller/ListSelector",
     "sap/ui/thirdparty/sinon",
     "sap/ui/thirdparty/sinon-qunit"
 ], function(ListSelector) {

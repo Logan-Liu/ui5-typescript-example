@@ -1,7 +1,7 @@
 import MockServer from "sap/ui/core/util/MockServer";
 
 var oMockServer: MockServer,
-    _sAppModulePath = "typescript/example/ui5app/",
+    _sAppModulePath = "hotel/ui5/",
     _sJsonFilesModulePath = _sAppModulePath + "localService/mockdata";
 
 export default {

@@ -1,6 +1,6 @@
 import BaseObject from "sap/ui/base/Object";
 
-@UI5("typescript.example.ui5app.model.ListSelector")
+@UI5("hotel.ui5.model.ListSelector")
 export default class ListSelector extends BaseObject
 {
     private _oList: sap.m.List
@@ -13,7 +13,7 @@ export default class ListSelector extends BaseObject
      * function.
      * @class
      * @public
-     * @alias typescript.example.ui5app.model.ListSelector
+     * @alias hotel.ui5.model.ListSelector
      */
     constructor() {
         super();
@@ -117,7 +117,7 @@ export default class ListSelector extends BaseObject
      * is called.
      * @param {function} fnFunction the function to be executed when the list fires a selection change event
      * @param {function} oListener the listener object
-     * @return {typescript.example.ui5app.model.ListSelector} the list selector object for method chaining
+     * @return {hotel.ui5.model.ListSelector} the list selector object for method chaining
      * @public
      */
     public attachListSelectionChange(fnFunction: Function, oListener: any): ListSelector {
@@ -133,7 +133,7 @@ export default class ListSelector extends BaseObject
      * is called.
      * @param {function} fnFunction the function to be executed when the list fires a selection change event
      * @param {function} oListener the listener object
-     * @return {typescript.example.ui5app.model.ListSelector} the list selector object for method chaining
+     * @return {hotel.ui5.model.ListSelector} the list selector object for method chaining
      * @public
      */
     public detachListSelectionChange(fnFunction: Function, oListener: any): ListSelector {

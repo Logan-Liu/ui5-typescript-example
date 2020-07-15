@@ -1,7 +1,7 @@
 import BaseObject   from "sap/ui/base/Object";
 import Sorter       from "sap/ui/model/Sorter";
 
-@UI5("typescript.example.ui5app.model.GroupSortState")
+@UI5("hotel.ui5.model.GroupSortState")
 export default class GroupSortState extends BaseObject
 {
     private _oViewModel: sap.ui.model.json.JSONModel;
@@ -16,7 +16,7 @@ export default class GroupSortState extends BaseObject
      * @public
      * @param {sap.ui.model.json.JSONModel} oViewModel the model of the current view
      * @param {function} fnGroupFunction the grouping function to be applied
-     * @alias typescript.example.ui5app.model.GroupSortState
+     * @alias hotel.ui5.model.GroupSortState
      */
     constructor(oViewModel: sap.ui.model.json.JSONModel, fnGroupFunction: Function) {
         super();

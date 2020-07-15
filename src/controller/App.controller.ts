@@ -1,7 +1,8 @@
-import BaseController   from "typescript/example/ui5app/controller/BaseController";
+import BaseController   from "hotel/ui5/controller/BaseController";
 import JSONModel        from "sap/ui/model/json/JSONModel";
+import Event = sap.ui.base.Event;
 
-@UI5("typescript.example.ui5app.controller.App")
+@UI5("hotel.ui5.controller.App")
 export default class App extends BaseController {
 
     public onInit(): void {
@@ -12,7 +13,7 @@ export default class App extends BaseController {
             oListSelector = oComponent.oListSelector,
             iOriginalBusyDelay = this.getView().getBusyIndicatorDelay();
 
-        oViewModel = new JSONModel({
+        oViewModel = new JSONModel('',{
             busy : true,
             delay : 0
         });
@@ -34,6 +35,10 @@ export default class App extends BaseController {
 
         // apply content density mode to root view
         this.getView().addStyleClass(oComponent.getContentDensityClass());
+    }
+
+    public avatarPressed (oEvent:Event):void{
+        
     }
 
 }

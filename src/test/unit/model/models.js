@@ -1,7 +1,7 @@
 /*global QUnit*/
 
 sap.ui.define([
-    "typescript/example/ui5app/model/models",
+    "hotel/ui5/model/models",
     "sap/ui/thirdparty/sinon",
     "sap/ui/thirdparty/sinon-qunit"
 ], function (models) {

@@ -12,25 +12,25 @@ QUnit.config.autostart = false;
 
 sap.ui.require([
     "sap/ui/test/Opa5",
-    "typescript/example/ui5app/test/integration/pages/Common",
+    "hotel/ui5/test/integration/pages/Common",
     "sap/ui/test/opaQunit",
-    "typescript/example/ui5app/test/integration/pages/App",
-    "typescript/example/ui5app/test/integration/pages/Browser",
-    "typescript/example/ui5app/test/integration/pages/Master",
-    "typescript/example/ui5app/test/integration/pages/Detail",
-    "typescript/example/ui5app/test/integration/pages/NotFound"
+    "hotel/ui5/test/integration/pages/App",
+    "hotel/ui5/test/integration/pages/Browser",
+    "hotel/ui5/test/integration/pages/Master",
+    "hotel/ui5/test/integration/pages/Detail",
+    "hotel/ui5/test/integration/pages/NotFound"
 ], function (Opa5, Common) {
     "use strict";
     Opa5.extendConfig({
         arrangements: new Common(),
-        viewNamespace: "typescript.example.ui5app.view."
+        viewNamespace: "hotel.ui5.view."
     });
 
     sap.ui.require([
-        "typescript/example/ui5app/test/integration/MasterJourney",
-        "typescript/example/ui5app/test/integration/NavigationJourney",
-        "typescript/example/ui5app/test/integration/NotFoundJourney",
-        "typescript/example/ui5app/test/integration/BusyJourney"
+        "hotel/ui5/test/integration/MasterJourney",
+        "hotel/ui5/test/integration/NavigationJourney",
+        "hotel/ui5/test/integration/NotFoundJourney",
+        "hotel/ui5/test/integration/BusyJourney"
     ], function () {
         QUnit.start();
     });

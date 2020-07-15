@@ -11,7 +11,7 @@
         "sourceMap": true,
         "baseUrl": "./",
         "paths": {
-            "typescript/example/ui5app/*": [ "./src/*" ],
+            "hotel/ui5/*": [ "./src/*" ],
             "sap/*": [ "./node_modules/ui5ts/exports/sap/*" ]
         }
     },

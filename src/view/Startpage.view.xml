@@ -1,0 +1,156 @@
+<mvc:View
+	controllerName="hotel.ui5.controller.Startpage"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:layout="sap.ui.layout"
+	xmlns:microchart="sap.suite.ui.microchart">
+	<Page showHeader="false">
+		<layout:VerticalLayout class="sapUiResponsiveMargin">
+			<Title
+				titleStyle="H2"
+				text="数据监控"
+				class="sapUiTinyMarginBegin"/>
+			<layout:HorizontalLayout allowWrapping="true">
+				<GenericTile
+					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+					header="酒店数据推送"
+					subheader="总计：5000"
+					press=".onNavToProcessFlow">
+					<tileContent>
+						<TileContent unit="已预定：850">
+							<content>
+								<NumericContent
+									scale="%"
+									value="17"
+									icon="sap-icon://addresses"/>
+							</content>
+						</TileContent>
+					</tileContent>
+				</GenericTile>
+				<!--<GenericTile
+					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+					header="{
+						parts: [
+							'i18n>startpageCCTileTitle',
+							'business>/year',
+							'business>/currency'
+						],
+						formatter: '.formatMessage'
+					}">
+					<tileContent>
+						<TileContent>
+							<content>
+								<microchart:BulletMicroChart
+									size="Responsive"
+									targetValue="{business>/plannedExpenses}"
+									targetValueLabel="{
+										path: 'business>/plannedExpenses',
+										formatter: '.formatNumber'
+									}"
+									actualValueLabel="{
+										path: 'business>/expenses',
+										formatter: '.formatNumber'
+									}"
+									minValue="0">
+									<microchart:actual>
+										<microchart:BulletMicroChartData
+											value="{business>/expenses}"
+											color="Critical"/>
+									</microchart:actual>
+									<microchart:thresholds>
+										<microchart:BulletMicroChartData
+											value="{business>/expensesCritical}"
+											color="Critical"/>
+										<microchart:BulletMicroChartData
+											value="{business>/budget}"
+											color="Error"/>
+									</microchart:thresholds>
+								</microchart:BulletMicroChart>
+							</content>
+						</TileContent>
+					</tileContent>
+				</GenericTile>
+				<GenericTile
+					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+					header="{i18n>startpageUserReviewsTileTitle}"
+					press=".onNavToReviews">
+					<tileContent>
+						<TileContent>
+							<content>
+								<NumericContent
+									value="{
+										path: 'reviews>/UserReviews',
+										formatter: '.getEntityCount'
+									}"
+									indicator="None"
+									valueColor="Neutral"/>
+							</content>
+						</TileContent>
+					</tileContent>
+				</GenericTile>
+				<GenericTile
+					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+					header="{i18n>startpageTestResultsTileTitle}"
+					subheader="{i18n>startpageTestResultsTileSubTitle}"
+					press=".onNavToChartContainer">
+					<tileContent>
+						<TileContent>
+							<content>
+								<ImageContent src="sap-icon://temperature"/>
+							</content>
+						</TileContent>
+					</tileContent>
+				</GenericTile>-->
+				<SlideTile
+					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+					tiles="{news>/News}">
+					<GenericTile
+							header="{news>header}"
+							subheader="{news>subheader}"
+						backgroundImage="{news>image}"
+						state="{news>state}"
+						frameType="TwoByOne"
+						press=".onNavToReviews">
+						<tileContent>
+							<TileContent
+								footer="{
+									path: 'news>date',
+									formatter: '.formatJSONDate'
+								}">
+								<content>
+									<NewsContent
+										contentText="{news>content}"
+										subheader="{news>subheader}">
+									</NewsContent>
+								</content>
+							</TileContent>
+						</tileContent>
+					</GenericTile>
+				</SlideTile>
+			</layout:HorizontalLayout>
+			<Title
+				titleStyle="H2"
+				text="链接"
+				class="sapUiTinyMarginBegin sapUiMediumMarginTop"/>
+			<layout:HorizontalLayout allowWrapping="true">
+				<GenericTile
+					header="飞猪"
+
+					mode="LineMode"
+					class="sapUiTinyMarginBegin">
+					<!--<ImageContent src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1594786503373&amp;di=270c124459e7488b1c18d543d8065c05&amp;imgtype=0&amp;src=http%3A%2F%2Fp0.ssl.qhimgs4.com%2Ft010ae6ac2b3584de53.jpg">
+
+					</ImageContent>-->
+				</GenericTile>
+				<GenericTile
+					header="携程"
+					mode="LineMode"
+					class="sapUiTinyMarginBegin">
+					<!--<ImageContent src="https://dss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3819437132,3014012228&amp;fm=26&amp;gp=0.jpg">
+
+					</ImageContent>-->
+				</GenericTile>
+			</layout:HorizontalLayout>
+		</layout:VerticalLayout>
+	</Page>
+</mvc:View>

@@ -1,9 +1,9 @@
 /*global history */
 import Controller    from "sap/ui/core/mvc/Controller";
 import History       from "sap/ui/core/routing/History";
-import MyUIComponent from "typescript/example/ui5app/Component";
+import MyUIComponent from "hotel/ui5/Component";
 
-@UI5("typescript.example.ui5app.controller.BaseController")
+@UI5("hotel.ui5.controller.BaseController")
 export default class BaseController extends Controller
 {
     /**
@@ -53,7 +53,7 @@ export default class BaseController extends Controller
      * Convenience method for getting the typed owner component.
      * @public
      * @override
-     * @returns {typescript.example.ui5app.Component} the owner component
+     * @returns {hotel.ui5.Component} the owner component
      */
     public getOwnerComponent(): MyUIComponent {
         return <MyUIComponent>super.getOwnerComponent();

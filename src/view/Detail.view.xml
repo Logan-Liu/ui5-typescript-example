@@ -1,5 +1,5 @@
 <mvc:View
-    controllerName="typescript.example.ui5app.controller.Detail"
+    controllerName="hotel.ui5.controller.Detail"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:semantic="sap.m.semantic">

@@ -1,10 +1,10 @@
 import UIComponent  from "sap/ui/core/UIComponent";
 import Device       from "sap/ui/Device";
-import models       from "typescript/example/ui5app/model/models";
-import ListSelector from "typescript/example/ui5app/controller/ListSelector";
-import ErrorHandler from "typescript/example/ui5app/controller/ErrorHandler";
+import models       from "hotel/ui5/model/models";
+import ListSelector from "hotel/ui5/controller/ListSelector";
+import ErrorHandler from "hotel/ui5/controller/ErrorHandler";
 
-@UI5("typescript.example.ui5app.Component")
+@UI5("hotel.ui5.Component")
 export default class Component extends UIComponent
 {
     public static metadata: any = {
