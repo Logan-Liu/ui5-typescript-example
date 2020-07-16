@@ -1,0 +1,53 @@
+<mvc:View controllerName="hotel.reuse.order.controller.List"
+  xmlns:mvc="sap.ui.core.mvc" 
+  xmlns="sap.m" 
+  displayBlock="true">
+  <Page id="page" 
+    showHeader="false" 
+    enableScrolling="true" 
+    class="categoriesPage">
+    <Table inset="false" 
+      busyIndicatorDelay="0" 
+      items="{/Orders}">
+      <headerToolbar>
+        <OverflowToolbar>
+          <content>
+            <Title text="订单列表"
+              level="H2" />
+            <ToolbarSpacer />
+            <Button text="导出"/>
+          </content>
+        </OverflowToolbar>
+      </headerToolbar>
+      <columns>
+        <Column width="12em">
+          <Text text="序号" />
+        </Column>
+        <Column >
+          <Text text="预定日期" />
+        </Column>
+        <Column>
+          <Text text="入住日期" />
+        </Column>
+        <Column>
+          <Text text="金额" />
+        </Column>
+        <Column>
+          <Text text="状态" />
+        </Column>
+      </columns>
+      <items>
+        <ColumnListItem type="Navigation" 
+          press="onPressListItem">
+          <cells>
+            <Text text="{OrderID}" />
+            <Text text="{OrderDate}" />
+            <Text text="{RequiredDate}" />
+            <Text text="{Freight}" />
+            <Text text="已付款" />
+          </cells>
+        </ColumnListItem>
+      </items>
+    </Table>
+  </Page>
+</mvc:View>

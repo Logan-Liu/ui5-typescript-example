@@ -1,0 +1,52 @@
+<mvc:View controllerName="hotel.reuse.hotel.controller.List"
+  xmlns:mvc="sap.ui.core.mvc" 
+  xmlns="sap.m" 
+  displayBlock="true">
+  <Page id="page" 
+    showHeader="false" 
+    enableScrolling="true" 
+    class="productsPage">
+    <Table inset="false" 
+      busyIndicatorDelay="0" 
+      items="{path:'/Products',parameters:{expand:'Supplier'}}">
+      <headerToolbar>
+        <OverflowToolbar>
+          <content>
+            <Title text="酒店列表"
+              level="H2" />
+            <ToolbarSpacer />
+          </content>
+        </OverflowToolbar>
+      </headerToolbar>
+      <columns>
+        <Column width="12em">
+          <Text text="序号" />
+        </Column>
+        <Column>
+          <Text text="名称" />
+        </Column>
+        <Column>
+          <Text text="供应商" />
+        </Column>
+        <Column>
+          <Text text="初始价格" />
+        </Column>
+        <Column>
+          <Text text="销售价格" />
+        </Column>
+      </columns>
+      <items>
+        <ColumnListItem type="Navigation" 
+          press="onPressListItem">
+          <cells>
+            <Text text="{ProductID}" />
+            <Text text="{ProductName}" />
+            <Text text="{Supplier/CompanyName}" />
+            <Text text="{path:'UnitPrice', formatter:'.priceFormatter'}" />
+            <Text text="{path:'UnitPrice', formatter:'.salePriceFormatter'}" />
+          </cells>
+        </ColumnListItem>
+      </items>
+    </Table>
+  </Page>
+</mvc:View>

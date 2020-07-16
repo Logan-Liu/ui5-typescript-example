@@ -15,7 +15,7 @@
 					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
 					header="酒店数据推送"
 					subheader="总计：5000"
-					press=".onNavToProcessFlow">
+					press=".onNavToHotel">
 					<tileContent>
 						<TileContent unit="已预定：850">
 							<content>
@@ -110,7 +110,7 @@
 						backgroundImage="{news>image}"
 						state="{news>state}"
 						frameType="TwoByOne"
-						press=".onNavToReviews">
+						press=".onNavToOrder">
 						<tileContent>
 							<TileContent
 								footer="{

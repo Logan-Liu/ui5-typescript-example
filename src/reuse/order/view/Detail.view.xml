@@ -1,0 +1,114 @@
+<mvc:View controllerName="hotel.reuse.order.controller.Detail"
+  xmlns:mvc="sap.ui.core.mvc" 
+  xmlns="sap.m" 
+  xmlns:l="sap.ui.layout" 
+  xmlns:f="sap.ui.layout.form" 
+  xmlns:core="sap.ui.core" 
+  displayBlock="true" 
+  busyIndicatorDelay="0">
+  <Page id="page" 
+    showHeader="false" 
+    showNavButton="true" 
+    enableScrolling="true" 
+    class="categoriesPage" 
+    navButtonPress="onNavButtonPress">
+    <VBox class="sapUiSmallMargin">
+      <!--<f:Form id="FormDisplay354"
+        editable="false">
+        <f:title>
+          <core:Title text="{CategoryName} {i18n>detailViewTitle}" />
+        </f:title>
+        <f:layout>
+          <f:ResponsiveGridLayout labelSpanXL="3" 
+            labelSpanL="3" 
+            labelSpanM="3" 
+            labelSpanS="12" 
+            adjustLabelSpan="false" 
+            emptySpanXL="4" 
+            emptySpanL="4" 
+            emptySpanM="4" 
+            emptySpanS="0" 
+            columnsXL="1" 
+            columnsL="1" 
+            columnsM="1" 
+            singleContainerFullSize="false" />
+        </f:layout>
+        <f:formContainers>
+          <f:FormContainer>
+            <f:formElements>
+              <f:FormElement label="序号">
+                <f:fields>
+                  <Text text="{OrderID}" />
+                </f:fields>
+              </f:FormElement>
+              <f:FormElement label="酒店序号">
+                <f:fields>
+                  <Text text="{ProductID}" />
+                </f:fields>
+              </f:FormElement>
+              <f:FormElement label="价格">
+                <f:fields>
+                  <Text text="{UnitPrice}" />
+                </f:fields>
+              </f:FormElement>
+              <f:FormElement label="数量">
+                <f:fields>
+                  <Text text="{Quantity}" />
+                </f:fields>
+              </f:FormElement>
+              <f:FormElement label="折扣">
+                <f:fields>
+                  <Text text="{Discount}" />
+                </f:fields>
+              </f:FormElement>
+
+            </f:formElements>
+          </f:FormContainer>
+        </f:formContainers>
+      </f:Form>-->
+      <Table inset="false" 
+        growingThreshold="10" 
+        busyIndicatorDelay="0" 
+        items="{path:'Order_Details'}">
+        <headerToolbar>
+          <OverflowToolbar>
+            <content>
+              <Title text="预定列表"
+                level="H2" />
+              <ToolbarSpacer />
+            </content>
+          </OverflowToolbar>
+        </headerToolbar>
+        <columns>
+          <Column width="12em">
+            <Text text="订单号" />
+          </Column>
+          <Column>
+            <Text text="房间号" />
+          </Column>
+          <Column>
+            <Text text="预定价格" />
+          </Column>
+          <Column>
+            <Text text="数量" />
+          </Column>
+          <Column>
+            <Text text="折扣" />
+          </Column>
+        </columns>
+        <items>
+          <ColumnListItem type="Navigation" 
+            press="onPressProduct">
+            <cells>
+              <Text text="{OrderID}" />
+              <Text text="{ProductID}" />
+              <Text text="{path:'UnitPrice', formatter:'.salePriceFormatter'}" />
+              <Text text="{Quantity}" />
+              <Text text="{Discount} %" />
+            </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+    </VBox>
+  </Page>
+</mvc:View>

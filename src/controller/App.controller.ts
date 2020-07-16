@@ -13,10 +13,10 @@ export default class App extends BaseController {
             oListSelector = oComponent.oListSelector,
             iOriginalBusyDelay = this.getView().getBusyIndicatorDelay();
 
-        oViewModel = new JSONModel('',{
+        oViewModel = new JSONModel({
             busy : true,
             delay : 0
-        });
+        },true);
         this.setModel(oViewModel, "appView");
 
         fnSetAppNotBusy = () => {

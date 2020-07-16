@@ -51,8 +51,27 @@
             "id": "app"
         },
 
+        "componentUsages": {
+            "orderComponent": {
+                "name": "hotel.reuse.order",
+                "settings": {},
+                "componentData": {
+                    "parentComponentName": "hotel.ui5.Component"
+                },
+                "lazy": true
+            },
+            "hotelComponent": {
+                "name": "hotel.reuse.hotel",
+                "settings": {},
+                "componentData": {
+                    "parentComponentName": "hotel.ui5.Component"
+                },
+                "lazy": true
+            }
+        },
+
         "dependencies": {
-            "minUI5Version": "1.42.0",
+            "minUI5Version": "1.72",
             "libs": {
                 "sap.ui.core": {
                     "minVersion": "1.42.0"
@@ -108,6 +127,22 @@
                     "target": "logon"
                 },
                 {
+                    "name": "order",
+                    "pattern": "order",
+                    "target": {
+                        "name": "order",
+                        "prefix": "s"
+                    }
+                },
+                {
+                    "name": "hotel",
+                    "pattern": "hotel",
+                    "target": {
+                        "name": "hotel",
+                        "prefix": "p"
+                    }
+                },
+                {
                     "pattern": "hotel",
                     "name": "master",
                     "target": [
@@ -133,6 +168,14 @@
                 "logon": {
                     "viewName": "Logon",
                     "viewLevel": 1
+                },
+                "order": {
+                    "type": "Component",
+                    "usage": "orderComponent"
+                },
+                "hotel": {
+                    "type": "Component",
+                    "usage": "hotelComponent"
                 },
 
                 "master": {
